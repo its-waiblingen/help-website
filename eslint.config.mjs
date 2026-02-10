@@ -2,7 +2,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 
 const eslintConfig = defineConfig([
   globalIgnores([
-    '_site/**',
+    'docs/**',
     'public/_pagefind/**',
   ]),
 ])

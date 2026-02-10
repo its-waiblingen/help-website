@@ -4,11 +4,11 @@
   "license": "UNLICENSED",
   "type": "module",
   "scripts": {
-    "dev": "concurrently -n 11ty,css -c blue,magenta \"eleventy --serve\" \"tailwindcss -i src/assets/css/globals.css -o _site/assets/css/globals.css --watch\"",
-    "build": "eleventy && tailwindcss -i src/assets/css/globals.css -o _site/assets/css/globals.css --minify",
-    "postbuild": "pagefind --site _site --output-path _site/_pagefind --force-language de",
+    "dev": "concurrently -n 11ty,css -c blue,magenta \"eleventy --serve\" \"tailwindcss -i src/assets/css/globals.css -o docs/assets/css/globals.css --watch\"",
+    "build": "eleventy && tailwindcss -i src/assets/css/globals.css -o docs/assets/css/globals.css --minify",
+    "postbuild": "pagefind --site docs --output-path docs/_pagefind --force-language de",
     "lint": "eslint",
-    "clean": "rm -rf _site",
+    "clean": "rm -rf docs",
     "update-rustdesk": "node scripts/update-rustdesk.js"
   },
   "prettier": {
