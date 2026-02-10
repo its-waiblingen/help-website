@@ -8,7 +8,8 @@
     "build": "eleventy && tailwindcss -i src/assets/css/globals.css -o _site/assets/css/globals.css --minify",
     "postbuild": "pagefind --site _site --output-path _site/_pagefind --force-language de",
     "lint": "eslint",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "update-rustdesk": "node scripts/update-rustdesk.js"
   },
   "prettier": {
     "semi": false,

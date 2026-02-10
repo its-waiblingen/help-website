@@ -18,7 +18,12 @@ Content is managed inside the project's files.
 ### Templates & Content
 - Nunjucks layouts in `src/_includes/layouts/`
 - Markdown content pages in `src/`
-- Site data in `src/_data/`
+- Site data in `src/_data/` (centralized metadata consumed by templates, e.g. `rustdesk.json`)
+- Inline SVG icon partials in `src/_includes/icons/` (use `{% include "icons/<name>.njk" %}`)
+
+### Scripts
+- Automation scripts live in `scripts/`
+- `pnpm run update-rustdesk` — Fetch latest RustDesk release from GitHub and update `src/_data/rustdesk.json`
 
 ### Styling
 - Tailwind CSS 4 with custom theme in `src/assets/css/globals.css`
@@ -31,6 +36,12 @@ Use semantic text color classes for consistency:
 - `text-muted` — Secondary/supporting text like descriptions, roles, bylines
 
 Do NOT use raw color classes like `text-zinc-800` for body text. Use the semantic classes instead.
+
+### Custom Utilities
+- `card-glow` — Adds a primary-colored outline and glow shadow to a card (applied via JS for OS auto-detection)
+
+### OS Auto-Detection
+The download page uses a `data-os` attribute on each card and an inline script to detect the user's OS from `navigator.userAgent`. The detected card receives the `card-glow` class. Without JS, all cards display equally.
 
 ## Code Style
 

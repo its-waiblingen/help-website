@@ -1,0 +1,26 @@
+{
+  "version": "1.4.5",
+  "downloads": [
+    {
+      "os": "windows",
+      "label": "Windows",
+      "description": "Windows 10 / 11 (64-Bit)",
+      "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.5/rustdesk-1.4.5-x86_64.exe",
+      "icon": "windows"
+    },
+    {
+      "os": "macos-arm",
+      "label": "macOS (Apple Silicon)",
+      "description": "macOS mit M1 / M2 / M3 / M4",
+      "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.5/rustdesk-1.4.5-aarch64.dmg",
+      "icon": "apple"
+    },
+    {
+      "os": "macos-intel",
+      "label": "macOS (Intel)",
+      "description": "macOS mit Intel-Prozessor",
+      "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.5/rustdesk-1.4.5-x86_64.dmg",
+      "icon": "apple"
+    }
+  ]
+}
