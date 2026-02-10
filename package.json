@@ -1,0 +1,39 @@
+{
+  "name": "@its/help-website",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n 11ty,css -c blue,magenta \"eleventy --serve\" \"tailwindcss -i src/assets/css/globals.css -o _site/assets/css/globals.css --watch\"",
+    "build": "eleventy && tailwindcss -i src/assets/css/globals.css -o _site/assets/css/globals.css --minify",
+    "postbuild": "pagefind --site _site --output-path _site/_pagefind --force-language de",
+    "lint": "eslint",
+    "clean": "rm -rf _site"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
+    "tailwindStylesheet": "./src/assets/css/globals.css",
+    "tailwindFunctions": [
+      "clsx"
+    ]
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/cli": "^4.1.18",
+    "concurrently": "^9.0.0",
+    "daisyui": "^5.5.18",
+    "eslint": "^9.39.2",
+    "pagefind": "^1.4.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  }
+}

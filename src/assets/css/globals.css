@@ -1,0 +1,166 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable.woff2?v=4.1') format('woff2');
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable-Italic.woff2?v=4.1') format('woff2');
+}
+
+@font-feature-values InterVariable {
+  @character-variant {
+    cv01: 1;
+    cv02: 2;
+    cv03: 3;
+    cv04: 4;
+    cv05: 5;
+    cv06: 6;
+    cv07: 7;
+    cv08: 8;
+    cv09: 9;
+    cv10: 10;
+    cv11: 11;
+    cv12: 12;
+    cv13: 13;
+    alt-1: 1;
+    /* Alternate one */
+    alt-3: 9;
+    /* Flat-top three */
+    open-4: 2;
+    /* Open four */
+    open-6: 3;
+    /* Open six */
+    open-9: 4;
+    /* Open nine */
+    lc-l-with-tail: 5;
+    /* Lower-case L with tail */
+    simplified-u: 6;
+    /* Simplified u */
+    alt-double-s: 7;
+    /* Alternate German double s */
+    uc-i-with-serif: 8;
+    /* Upper-case i with serif */
+    uc-g-with-spur: 10;
+    /* Capital G with spur */
+    single-story-a: 11;
+    /* Single-story a */
+    compact-lc-f: 12;
+    /* Compact f */
+    compact-lc-t: 13;
+    /* Compact t */
+  }
+
+  @styleset {
+    ss01: 1;
+    ss02: 2;
+    ss03: 3;
+    ss04: 4;
+    ss05: 5;
+    ss06: 6;
+    ss07: 7;
+    ss08: 8;
+    open-digits: 1;
+    /* Open digits */
+    disambiguation: 2;
+    /* Disambiguation (with zero) */
+    disambiguation-except-zero: 4;
+    /* Disambiguation (no zero) */
+    round-quotes-and-commas: 3;
+    /* Round quotes &amp; commas */
+    square-punctuation: 7;
+    /* Square punctuation */
+    square-quotes: 8;
+    /* Square quotes */
+    circled-characters: 5;
+    /* Circled characters */
+    squared-characters: 6;
+    /* Squared characters */
+  }
+}
+
+@theme {
+  --font-sans: InterVariable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.002 247.839);
+  --color-base-200: oklch(96% 0.003 264.542);
+  --color-base-300: oklch(92% 0.006 264.531);
+  --color-base-content: oklch(21% 0.034 264.665);
+  --color-primary: #e30613;
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: #bbbcbc;
+  --color-secondary-content: oklch(28% 0 0);
+  --color-accent: #e30613;
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(87% 0 0);
+  --color-neutral-content: oklch(21% 0.034 264.665);
+  --color-info: #faff70;
+  --color-info-content: oklch(13% 0.028 261.692);
+  --color-success: oklch(59% 0.145 163.225);
+  --color-success-content: oklch(97% 0.021 166.113);
+  --color-warning: oklch(75% 0.183 55.934);
+  --color-warning-content: oklch(13% 0.028 261.692);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0.014 343.198);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 1;
+}
+
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: oklch(25.33% 0.016 252.42);
+  --color-base-200: oklch(23.26% 0.014 253.1);
+  --color-base-300: oklch(21.15% 0.012 254.09);
+  --color-base-content: oklch(97.807% 0.029 256.847);
+  --color-primary: #e30613;
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: #bbbcbc;
+  --color-secondary-content: oklch(98% 0 0);
+  --color-accent: #e30613;
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: #faff70;
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(59% 0.145 163.225);
+  --color-success-content: oklch(98% 0.001 106.423);
+  --color-warning: oklch(75% 0.183 55.934);
+  --color-warning-content: oklch(13% 0.028 261.692);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0.014 343.198);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 1;
+}

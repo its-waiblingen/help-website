@@ -1,0 +1,24 @@
+[tools]
+node = "25.2.1"
+
+[env]
+_.file = ".env"
+
+[tasks."dev"]
+description = "Run the website in development mode"
+run = "pnpm run dev"
+alias = "dev"
+
+[tasks.lint]
+description = "Run the linter"
+run = "pnpm run lint"
+alias = "lint"
+
+[tasks.build]
+description = "Build the project"
+run = "pnpm run build"
+alias = "build"
+
+[tasks."docker:context"]
+description = "Starts `ncdu` with patterns specified in `.dockerignore` excluded."
+run = "ncdu -X .dockerignore"
