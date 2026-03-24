@@ -9,7 +9,8 @@
     "postbuild": "pagefind --site docs --output-path docs/_pagefind --force-language de",
     "lint": "eslint",
     "clean": "rm -rf docs",
-    "update-rustdesk": "node scripts/update-rustdesk.js"
+    "update-rustdesk": "node scripts/update-rustdesk.js",
+    "postupdate-rustdesk": "npm run build"
   },
   "prettier": {
     "semi": false,
