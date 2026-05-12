@@ -17,9 +17,9 @@ description: Laden Sie die RustDesk-Software herunter, damit ITS Waiblingen Ihne
 </div>
 
 <main class="mx-auto max-w-4xl px-4 py-12">
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
     {% for download in rustdesk.downloads %}
-    <a href="{{ download.url }}" class="card card-border border-base-300 bg-base-100 cursor-pointer no-underline transition-colors hover:bg-base-200" data-os="{{ download.os }}">
+    <div class="card card-border border-base-300 bg-base-100" data-os="{{ download.os }}">
       <div class="card-body items-center text-center">
         <div class="text-body">
           {% include "icons/" + download.icon + ".njk" %}
@@ -27,17 +27,21 @@ description: Laden Sie die RustDesk-Software herunter, damit ITS Waiblingen Ihne
         <h2 class="card-title text-body">{{ download.label }}</h2>
         <p class="text-muted text-sm">{{ download.description }}</p>
         <div class="card-actions mt-4">
-          <span class="btn btn-primary">Download</span>
+          <a href="{{ download.url }}" class="btn btn-primary cursor-pointer no-underline">Download</a>
         </div>
+        {% if download.altUrl %}
+        <a href="{{ download.altUrl }}" class="link text-muted text-xs mt-2 cursor-pointer">{{ download.altLabel }}</a>
+        {% endif %}
       </div>
-    </a>
+    </div>
     {% endfor %}
   </div>
 
-  <p class="mt-8 text-center text-sm text-muted">
-    RustDesk Version {{ rustdesk.version }} ·
-    <a href="https://rustdesk.com" class="link" rel="noopener noreferrer nofollow" target="_blank">rustdesk.com</a>
+  {% if rustdesk.supporter %}
+  <p class="mt-12 text-center text-xs text-muted">
+    <a href="{{ rustdesk.supporter.url }}" class="link cursor-pointer">{{ rustdesk.supporter.label }}</a>
   </p>
+  {% endif %}
 </main>
 
 <script>

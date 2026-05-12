@@ -1,0 +1,24 @@
+{
+  "binaries": [
+    {
+      "key": "windows-exe",
+      "filename": "its-fernwartung.exe",
+      "url": "https://rustdesk.com/build/tasks/db76eb41-d839-466b-8444-011554624496/files/its-fernwartung.exe"
+    },
+    {
+      "key": "windows-msi",
+      "filename": "its-fernwartung.msi",
+      "url": "https://rustdesk.com/build/tasks/af3479bc-3ab3-488a-aa3b-4376fb66c963/files/its-fernwartung.msi"
+    },
+    {
+      "key": "macos-arm",
+      "filename": "its-fernwartung-arm64.dmg",
+      "url": "https://rustdesk.com/build/tasks/dad9029d-0db1-4b5e-b5f6-595741d2e228/files/its-fernwartung-arm64.dmg"
+    },
+    {
+      "key": "macos-arm-supporter",
+      "filename": "its-fernwartung-fuer-support-arm64.dmg",
+      "url": "https://rustdesk.com/build/tasks/2146d8af-a2eb-4851-94ff-1c62447bdbd3/files/its-fernwartung-fuer-support-arm64.dmg"
+    }
+  ]
+}

@@ -1,26 +1,24 @@
 {
-  "version": "1.4.6",
   "downloads": [
     {
       "os": "windows",
       "label": "Windows",
       "description": "Windows 10 / 11 (64-Bit)",
-      "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe",
+      "url": "/downloads/its-fernwartung.exe",
+      "altUrl": "/downloads/its-fernwartung.msi",
+      "altLabel": "MSI-Installer",
       "icon": "windows"
     },
     {
       "os": "macos-arm",
       "label": "macOS (Apple Silicon)",
       "description": "macOS mit M1 / M2 / M3 / M4",
-      "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg",
-      "icon": "apple"
-    },
-    {
-      "os": "macos-intel",
-      "label": "macOS (Intel)",
-      "description": "macOS mit Intel-Prozessor",
-      "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg",
+      "url": "/downloads/its-fernwartung-arm64.dmg",
       "icon": "apple"
     }
-  ]
+  ],
+  "supporter": {
+    "label": "Für Support-Mitarbeiter",
+    "url": "/downloads/its-fernwartung-fuer-support-arm64.dmg"
+  }
 }
